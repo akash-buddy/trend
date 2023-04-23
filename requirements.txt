@@ -4,6 +4,7 @@ argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 arrow==1.2.3
 keras
+tensorflow==2.21.0
 asttokens==2.2.1
 attrs==22.2.0
 backcall==0.2.0
