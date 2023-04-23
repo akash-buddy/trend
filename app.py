@@ -7,7 +7,13 @@ import yfinance as yf
 import streamlit as st
 from keras.models import load_model
 
+
+st.set_page_config(
+    page_title='Akku-TrendPredicrion',
+    layout='wide')
+ 
 yf.pdr_override()
+
 
 st.title('Stock Trend Prediction')
 
