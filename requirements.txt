@@ -95,6 +95,7 @@ python-Levenshtein==0.20.9
 pytz==2023.3
 pytz-deprecation-shim==0.1.0.post0
 PyYAML==6.0
+pandas_datareader==0.10.0
 pyzmq==25.0.2
 qtconsole==5.4.1
 QtPy==2.3.1
