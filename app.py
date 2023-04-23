@@ -11,7 +11,7 @@ from keras.models import load_model
 st.set_page_config(
     page_title='Akku-TrendPrediction',
     page_icon="chart_with_upwards_trend",
-    layout="wide",
+#     layout="wide",
     initial_sidebar_state="expanded")
  
 yf.pdr_override()
