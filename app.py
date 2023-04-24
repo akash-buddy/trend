@@ -246,5 +246,5 @@ with tab2:
         Final_chain2=Final_chain1.rename(columns={"CE_OI":"Open Interest"})
 #         pd.set_option('display.max_rows', None)
         # st.write(Final_chain,200,800,)
-        st.dataframe(Final_chain1)   
+        st.dataframe(Final_chain2)   
     
