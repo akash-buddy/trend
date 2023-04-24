@@ -21,9 +21,9 @@ yf.pdr_override()
 
 
 
-tab1,tab2,tab3=st.tabs(['OVERVIEW','OPTION-CHAIN','TREND-PREDICTION'])
+tab1,tab2=st.tabs(['OPTION-CHAIN','TREND-PREDICTION'])
  
-with tab3:
+with tab2:
     st.title('Stock Trend Prediction')
     end = datetime.now()
     start = datetime(end.year - 10, end.month, end.day)
@@ -103,7 +103,7 @@ with tab3:
     
     
     
-with tab2:
+with tab1:
     st.title("Option Chain")
 
     col1,col2,col3=st.columns(3)
@@ -251,11 +251,11 @@ with tab2:
         pe_sp_OI=Final_chain2[Final_chain2['strikePrice']==sprice].values[0,11]
 
         col1, col2, col3,col4,col5 = st.columns(5)
-        col1.metric("Temperature", ce_total_OI, "1.2 °F")
-        col5.metric("pe_total_OI",pe_total_OI,"1.2 °F")
-        col3.metric("Strike Price", sprice, "-8%")
-        col2.metric("Wind", ce_sp_OI, "-8%")
-        col4.metric("Humidity", pe_sp_OI, "4%")
+        col1.metric("Call Total Open Interest", ce_total_OI)
+        col5.metric("Put Total Open Interest",pe_total_OI)
+        col3.metric("Strike Price", sprice)
+        col2.metric("Call Open Interest", ce_sp_OI)
+        col4.metric("Put Open Interest", pe_sp_OI)
 
 #         pd.set_option('display.max_rows', None)
         # st.write(Final_chain,200,800,)
