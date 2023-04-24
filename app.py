@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 st.set_page_config(
     page_title='Akku-TrendPrediction',
     page_icon="chart_with_upwards_trend",
-#     layout="wide",
+    layout="wide",
     initial_sidebar_state="expanded")
  
 yf.pdr_override()
@@ -247,5 +247,5 @@ with tab2:
                                                   "PE_OI":"PE Open Interest","PE_CHNG_IN_OI":"PE CHNG Open Interest","PE_VOLUME":"PE Volume","PE_LTP":"PE Last Traded Price"})
 #         pd.set_option('display.max_rows', None)
         # st.write(Final_chain,200,800,)
-        st.dataframe(Final_chain2)   
+        st.dataframe(Final_chain2,1200,800)   
     
