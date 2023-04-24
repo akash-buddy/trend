@@ -17,11 +17,12 @@ st.set_page_config(
 yf.pdr_override()
 
 
-st.title('Stock Trend Prediction')
+
 
 tab1,tab2,tab3=st.tabs(['OVERVIEW','SCORECARD','PREDICTION'])
  
 with tab1:
+    st.title('Stock Trend Prediction')
     end = datetime.now()
     start = datetime(end.year - 10, end.month, end.day)
 
