@@ -247,8 +247,8 @@ with tab2:
                                                   "PE_OI":"PE Open Interest","PE_CHNG_IN_OI":"PE CHNG Open Interest","PE_VOLUME":"PE Volume","PE_LTP":"PE Last Traded Price"})
         ce_total_OI=Final_chain2['CE Open Interest'].values.sum()
         pe_total_OI=Final_chain2['PE Open Interest'].values.sum()
-        ce_sp_OI=Final_chain2[Final_chain2['strikePrice']==sp].values[0,1]
-        pe_sp_OI=Final_chain2[Final_chain2['strikePrice']==sp].values[0,11]
+        ce_sp_OI=Final_chain2[Final_chain2['strikePrice']==sprice].values[0,1]
+        pe_sp_OI=Final_chain2[Final_chain2['strikePrice']==sprice].values[0,11]
 
         col1, col2, col3,col4,col5 = st.columns(5)
         col1.metric("Temperature", ce_total_OI, "1.2 °F")
