@@ -249,13 +249,20 @@ with tab1:
         pe_total_OI=Final_chain2['PE Open Interest'].values.sum()
         ce_sp_OI=Final_chain2[Final_chain2['strikePrice']==sprice].values[0,1]
         pe_sp_OI=Final_chain2[Final_chain2['strikePrice']==sprice].values[0,11]
-
-        col1, col2, col3,col4,col5 = st.columns(5)
+        
+        maxce_OI=Final_chain2['CE Open Interest'].values.max()
+        maxpe_OI=Final_chain2['PE Open Interest'].values.max()
+        cestrik_OI=Final_chain2[Final_chain2['CE Open Interest']==maxce_OI].values[0,6]
+        pestrik_OI=Final_chain2[Final_chain2['PE Open Interest']==maxpe_OI].values[0,6]
+        
+        col1, col2, col3,col4,col5,col6,col7 = st.columns(5)
+        col2.metric("Max-CE Open interest",maxce_OI, delta=cestrik_OI)
+        col6.metric("Max-PE Open interest",maxpe_OI, delta=pestrik_OI)
         col1.metric("Call Total Open Interest", ce_total_OI)
-        col5.metric("Put Total Open Interest",pe_total_OI)
-        col3.metric("Strike Price", sprice)
-        col2.metric("Call Open Interest", ce_sp_OI)
-        col4.metric("Put Open Interest", pe_sp_OI)
+        col7.metric("Put Total Open Interest",pe_total_OI)
+        col4.metric("Strike Price", sprice)
+        col3.metric("Call Open Interest", ce_sp_OI)
+        col5.metric("Put Open Interest", pe_sp_OI)
 
 #         pd.set_option('display.max_rows', None)
         # st.write(Final_chain,200,800,)
