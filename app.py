@@ -6,7 +6,9 @@ from pandas_datareader import data as pdr
 import yfinance as yf
 import streamlit as st
 from keras.models import load_model
-
+import requests
+import warnings
+warnings.filterwarnings('ignore')
 
 st.set_page_config(
     page_title='Akku-TrendPrediction',
