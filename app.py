@@ -250,13 +250,14 @@ with tab2:
         ce_sp_OI=Final_chain2[Final_chain2['strikePrice']==sp].values[0,1]
         pe_sp_OI=Final_chain2[Final_chain2['strikePrice']==sp].values[0,11]
 
-        col1, col2, col3,col4 = st.columns(4)
+        col1, col2, col3,col4,col5 = st.columns(5)
         col1.metric("Temperature", ce_total_OI, "1.2 °F")
-        col4.metric("pe_total_OI",pe_total_OI,"1.2 °F")
+        col5.metric("pe_total_OI",pe_total_OI,"1.2 °F")
+        col2.metric("Strike Price", sprice, "-8%")
         col2.metric("Wind", ce_sp_OI, "-8%")
-        col3.metric("Humidity", pe_sp_OI, "4%")
+        col4.metric("Humidity", pe_sp_OI, "4%")
 
 #         pd.set_option('display.max_rows', None)
         # st.write(Final_chain,200,800,)
-        st.dataframe(Final_chain2,1200,800)   
+        st.dataframe(Final_chain2,1400,800)   
     
