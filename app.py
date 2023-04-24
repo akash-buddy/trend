@@ -244,9 +244,9 @@ with tab2:
         
         Final_chain1=Final_chain.drop(['CE_CHNG','CE_BID_QTY','PE_BID_OTY','EPE_CHING'],axis=1)
         
-        Final_chain2=Final_chain1.rename(columns={"CE_OI":"Open Interest","CE_CHNG_IN_OI":"CHNG Open Interest","CE_VOLUME":"Volume",
+#         Final_chain2=Final_chain1.rename(columns={"CE_OI":"Open Interest","CE_CHNG_IN_OI":"CHNG Open Interest","CE_VOLUME":"Volume",
                               "CE_LTP":"Last Traded Price","PE_OI":"Open Interest","PE_CHNG_IN_OI":"CHNG Open Interest","PE_VOLUME":"Volume","PE_LTP":"Last Traded Price"})
         pd.set_option('display.max_rows', None)
         # st.write(Final_chain,200,800,)
-        st.dataframe(Final_chain2,12000,800)   
+        st.dataframe(Final_chain1,12000,800)   
     
