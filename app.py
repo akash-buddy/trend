@@ -253,7 +253,7 @@ with tab2:
         col1, col2, col3,col4,col5 = st.columns(5)
         col1.metric("Temperature", ce_total_OI, "1.2 °F")
         col5.metric("pe_total_OI",pe_total_OI,"1.2 °F")
-        col2.metric("Strike Price", sprice, "-8%")
+        col3.metric("Strike Price", sprice, "-8%")
         col2.metric("Wind", ce_sp_OI, "-8%")
         col4.metric("Humidity", pe_sp_OI, "4%")
 
