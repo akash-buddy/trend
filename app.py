@@ -209,6 +209,26 @@ with tab2:
 
 
         sp=sprice
+        if nam=='BANKNIFTY':
+            
+            ste=str(sp)
+            strin=ste[2:5]
+            if strin=='100':
+                sp=sp-100
+            elif strin=='200':
+                sp=sp-200
+            elif strin=='300':
+                sp=sp-300
+            elif strin=='400':
+                sp=sp-400
+            elif strin=='600':
+                sp=sp-100
+            elif strin=='700':
+                sp=sp-200
+            elif strin=='800':
+                sp=sp-300
+            elif strin=='900':
+                sp=sp-400
 
         ind_lower= int(b[b['strikePrice']==sp].index[0])
         q=b.iloc[ind_lower-6:ind_lower-1]
