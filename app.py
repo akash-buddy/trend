@@ -245,6 +245,17 @@ with tab2:
         Final_chain1=Final_chain.drop(['CE_CHNG','CE_BID_QTY','PE_BID_OTY','EPE_CHING'],axis=1)
         Final_chain2=Final_chain1.rename(columns={"CE_OI":"CE Open Interest","CE_CHNG_IN_OI":"CE CHNG Open Interest","CE_VOLUME":"CE Volume","CE_LTP":"CE Last Traded Price",
                                                   "PE_OI":"PE Open Interest","PE_CHNG_IN_OI":"PE CHNG Open Interest","PE_VOLUME":"PE Volume","PE_LTP":"PE Last Traded Price"})
+        ce_total_OI=Final_chain2['CE Open Interest'].values.sum()
+        pe_total_OI=Final_chain2['PE Open Interest'].values.sum()
+        ce_sp_OI=Final_chain2[Final_chain2['strikePrice']==sp].values[0,1]
+        pe_sp_OI=Final_chain2[Final_chain2['strikePrice']==sp].values[0,11]
+
+        col1, col2, col3,col4 = st.columns(4)
+        col1.metric("Temperature", ce_total_OI, "1.2 °F")
+        col4.metric("pe_total_OI",pe_total_OI,"1.2 °F")
+        col2.metric("Wind", ce_sp_OI, "-8%")
+        col3.metric("Humidity", pe_sp_OI, "4%")
+
 #         pd.set_option('display.max_rows', None)
         # st.write(Final_chain,200,800,)
         st.dataframe(Final_chain2,1200,800)   
