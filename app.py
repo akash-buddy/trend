@@ -104,7 +104,6 @@ with tab1:
     
     
 with tab2:
-
     st.title("Option Chain")
 
     col1,col2,col3=st.columns(3)
@@ -195,7 +194,7 @@ with tab2:
         a=list(option_chain1['strikePrice'])
         b=pd.DataFrame(columns=['index','CE_OI','CE_CHNG_IN_OI','CE_VOLUME','CE_IV','CE_LTP','CE_CHNG','CE_BID_QTY','strikePrice','PE_BID_OTY',
                             'EPE_CHING','PE_LTP','PE_IV','PE_VOLUME','PE_CHNG_IN_OI','PE_OI'])
-        if name=='BANKNIFTY':
+        if nam=='BANKNIFTY':
             for i in a:
                 if (i % 500) == 0:
                     dff = int(option_chain1[option_chain1['strikePrice']==i].index[0])
@@ -225,6 +224,5 @@ with tab2:
 
         pd.set_option('display.max_rows', None)
         # st.write(Final_chain,200,800,)
-        st.dataframe(Final_chain,12000,800)
-    
+        st.dataframe(Final_chain,12000,800)   
     
