@@ -33,7 +33,7 @@ with tab2:
     df= pdr.get_data_yahoo(user_input, start, end)
 
     st.subheader("Data from 2013 - Till Now")
-    st.write(df.describe())
+    st.dataframe(df.describe(),1200,800)
 
     st.subheader("Closing Price vs Time chart")
     fig=plt.figure(figsize=(12,6))
