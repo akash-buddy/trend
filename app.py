@@ -255,7 +255,7 @@ with tab1:
         cestrik_OI=Final_chain2[Final_chain2['CE Open Interest']==maxce_OI].values[0,6]
         pestrik_OI=Final_chain2[Final_chain2['PE Open Interest']==maxpe_OI].values[0,6]
         
-        col1, col2, col3,col4,col5,col6,col7 = st.columns(5)
+        col1, col2, col3,col4,col5,col6,col7 = st.columns(7)
         col2.metric("Max-CE Open interest",maxce_OI, delta=cestrik_OI)
         col6.metric("Max-PE Open interest",maxpe_OI, delta=pestrik_OI)
         col1.metric("Call Total Open Interest", ce_total_OI)
