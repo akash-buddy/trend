@@ -21,9 +21,9 @@ yf.pdr_override()
 
 
 
-tab1,tab2,tab3=st.tabs(['OVERVIEW','SCORECARD','PREDICTION'])
+tab1,tab2,tab3=st.tabs(['OVERVIEW','OPTION-CHAIN','TREND-PREDICTION'])
  
-with tab1:
+with tab3:
     st.title('Stock Trend Prediction')
     end = datetime.now()
     start = datetime(end.year - 10, end.month, end.day)
