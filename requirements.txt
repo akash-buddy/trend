@@ -10,5 +10,5 @@ pandas_datareader
 yfinance
 requests
 bs4 
-tensorflow==2.7.0
-keras==2.7.0
+tensorflow
+keras
