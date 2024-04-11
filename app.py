@@ -11,7 +11,7 @@ yf.pdr_override()
 
 st.title('Stock Trend Prediction')
 
-tab1,tab2= 
+# tab1,tab2= 
 
 end = datetime.now()
 start = datetime(end.year - 10, end.month, end.day)
