@@ -12,3 +12,4 @@ requests
 bs4 
 tensorflow
 keras
+scikit-learn
