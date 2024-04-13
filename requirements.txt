@@ -141,7 +141,6 @@ Pygments==2.14.0
 Pympler==1.0.1
 pyparsing==3.0.9
 PyPDF2==3.0.1
-pypiwin32==223
 pyppeteer==1.0.2
 pyrsistent==0.19.3
 PySocks==1.7.1
